@@ -7,7 +7,7 @@ SELECT * FROM correct_answer
 
 
 
------- Actual Solution to the Given Problem--------------
+------ Actual Solution to the Given Problem using CTE Table--------------
 WITH CTE AS (
 	SELECT sl.roll_number,sl.student_name,sl.class,sl.section,sl.school_name,
 		SUM(CASE
@@ -233,7 +233,7 @@ WHERE pc.subject = 'Science'
 GROUP BY sl.roll_number,sl.student_name,sl.class,sl.section,sl.school_name
 Order BY 1
 
-----Calulation of Sciecnce score And Percentage
+----Calulation of Sciecnce score And Percentage using CTE Table
 WITH CTE AS(
 	SELECT sl.roll_number,sl.student_name,sl.class,sl.section,sl.school_name,
 		SUM(CASE
